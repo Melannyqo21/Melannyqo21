@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "mquinteroo"
+          git config --global user.email "orozcomelanny@gmail.com"
+
       - uses: Readme-Workflows/recent-activity@v2.4.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
